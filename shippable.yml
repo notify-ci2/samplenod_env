@@ -16,5 +16,5 @@ branches:
     
 build:
   ci:
-    - node --version
+    - node --version   
    # - sleep 3m
