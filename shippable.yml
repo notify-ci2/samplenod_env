@@ -3,18 +3,26 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-  - 0.12
+  #- 0.12
   - 4.2.3
-  - iojs-v1
+  #- iojs-v1
   - iojs-v2
-  - iojs-v3
+  #- iojs-v3
   - 5.0
 
 env: 
-  - secure: QeIFEMOkpQDS9Ssl+Oo57dMvl41wDcSOBUxDO8o2FgptIuXsdPWVfol8gYlRj8MP9k9IUfO9fORhEQ5SVGnaOYG7iBTcjLg3g4dUJeDV7GnsqC8dbMXgD7m9LC7T9knXlsq32+c105w1pvBNEmxJ5RYuyuN4EA4XD0u3a1aRHi4jd3zBkbvHijUoempK9pt/Pb725vwJfc2ps6CpixIvHKTEhfkRu3U3TBuV87vdlEfxSMVHZlbognnMn17YXwKnSwVzLKvBH2/Gycu+eSPJSL8T3ptXlL3PuuCwGMCNUGq693T/dYeeg7Ssrsmbdxp3IFYgrG9l4lJeYL826ZCrbw==
+  global:
+  #- secure: QeIFEMOkpQDS9Ssl+Oo57dMvl41wDcSOBUxDO8o2FgptIuXsdPWVfol8gYlRj8MP9k9IUfO9fORhEQ5SVGnaOYG7iBTcjLg3g4dUJeDV7GnsqC8dbMXgD7m9LC7T9knXlsq32+c105w1pvBNEmxJ5RYuyuN4EA4XD0u3a1aRHi4jd3zBkbvHijUoempK9pt/Pb725vwJfc2ps6CpixIvHKTEhfkRu3U3TBuV87vdlEfxSMVHZlbognnMn17YXwKnSwVzLKvBH2/Gycu+eSPJSL8T3ptXlL3PuuCwGMCNUGq693T/dYeeg7Ssrsmbdxp3IFYgrG9l4lJeYL826ZCrbw==
+    - secure: GJ+rzfODZ9BSrmFvQmzlj7IREn3TghNBEiLeo7SHLrDfnP7grP2vklwGCgd1gHwsyd8pVmA5zNKEPvo4oxmnFaLVDdY2cSkMlGAmy8CIdhWwbfZTdn/By3DXe8yfxdVnyn21oRNVdeg/mY1d/K4UBhQIioEmgtxnnrBBp87cPtFTxzqB2nD0+nWdvnqU7cOKX/0uZnFTu4hNYwu+BsF6vAiXZTlzA3KNjr66v0APV6YzNfwf1QXXF/EPYNTgNJLnRHbrxwQYKwHuF49iz+fTqiUwbVMJyXMThPvY2sRDCqEFI71MGOrMHIW3ZcIkJTyrnlrGeMUHtK3meeGhLqu4tg==
+  #TEST=BETA notify-ci2 beta
+    - secure: FZTZHvOt05bVJEsXMddKn3rjRmPfCkh22WYKKvy4a5VvQUPb9c/3Jz3bQPyUIAvdAa5R5q3W2hzUVfanlB0Bq2qdsKBS1KVp2WL7TT1hWHRWD3sn72qiqsd+r5LOjbv7sqmMFtPwUPJ7TByXf74AGGXOy3pI/lzmXfeUmCPDtbLF3gdgE+j/Y6y767/savRMxsWGI+XdXE5Z7sbqwtf5fpSIzbL6D1Vqe3zfbBWUjqkuNVJQ18M4qJsuVgRuH+NmNCf69RcrAYvzS4z+gAzEyZxIpxPECg355Wzzp++3PHA9ojO8BZe0nnGgIihmeduxVoGKI0pLQIzcVIgKp74YfQ==
+  #FOO=TOO notify-ci2 beta
+    - BETA=SHIP
   
 build:
   ci:
     - node --version
-    #- echo "$GOO"
-    - echo "$FOO" #bar 
+    - echo "$TEST"
+    - echo "$FOO" 
+    - echo "$BETA"
+    - sleep 12m
